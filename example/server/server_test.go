@@ -7,16 +7,14 @@ import (
 	"testing"
 	"time"
 
+	"github.com/go-tooling/protoc-gen-gofullmethods/example"
 	"github.com/myles-mcdonnell/blondie"
-	"github.com/nicovogelaar/protoc-gen-gofullmethods/example"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )
 
-var (
-	greeterClient example.GreeterClient
-)
+var greeterClient example.GreeterClient
 
 func TestMain(m *testing.M) {
 	go start()
@@ -41,7 +39,6 @@ func TestMain(m *testing.M) {
 }
 
 func TestGreeterServer_SayHello(t *testing.T) {
-
 	reply, err := greeterClient.SayHello(context.Background(), &example.HelloRequest{Name: "Nico"})
 	if err != nil {
 		t.Fatalf("failed to say hello: %v", err)

@@ -1,4 +1,4 @@
-module github.com/nicovogelaar/protoc-gen-gofullmethods
+module github.com/go-tooling/protoc-gen-gofullmethods
 
 require (
 	github.com/golang/protobuf v1.2.0

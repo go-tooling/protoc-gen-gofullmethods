@@ -6,7 +6,7 @@ import (
 	"log"
 	"net"
 
-	"github.com/nicovogelaar/protoc-gen-gofullmethods/example"
+	"github.com/go-tooling/protoc-gen-gofullmethods/example"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/reflection"
